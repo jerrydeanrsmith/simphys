@@ -92,6 +92,9 @@ void print_all(shared_ptr<vector<float> > array_ptr) {
 }
 
 int main(int argc, char **argv) {
+
+  using std::make_shared;
+
   for (int i = 0; i < 10; ++i) {
 
     /*
@@ -102,7 +105,7 @@ int main(int argc, char **argv) {
       Note that in this case we use the "auto" keyword to spare us
       from some (keyboard) typing.
      */
-    auto v = std::make_shared<vector<float> >(10);
+    auto v = make_shared<vector<float> >(10);
 
     for (int j = 0; j < 10; ++j) {
       (*v)[j] = 10 - j;
