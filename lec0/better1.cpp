@@ -20,6 +20,8 @@ int main(int argc, char **argv) {
   
   for (int i = 0; i < 10; ++i) {
     auto v = vector<float>(10);
+
+    cout << &v << endl;
     
     for (int j = 0; j < 10; ++j) {
       v[j] = 10 - j;
