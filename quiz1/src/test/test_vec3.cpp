@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <cmath>
 
@@ -33,8 +32,8 @@ protected:
   simphys::vec3 u;
   simphys::vec3 v;
 
-  simphys::vec3 small;
-  simphys::vec3 large;
+  //simphys::vec3 small;
+  //simphys::vec3 large;
 
 };
 
