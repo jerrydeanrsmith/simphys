@@ -123,6 +123,7 @@ void List<T>::add_node(shared_ptr<Node<T> > n) {
   shared_ptr <Node<T> > p = first;
   if (p == nullptr) {
     first = n;
+    last = n;
     n->next_node = nullptr;
   } else {
     while (p->next_node != nullptr) {
@@ -130,6 +131,7 @@ void List<T>::add_node(shared_ptr<Node<T> > n) {
     }
     p->next_node = n;
     n->next_node = nullptr;
+    last = n;
   }
 }
 
@@ -163,7 +165,6 @@ int main() {
   cl.add_node(cn1);
   cl.add_node(cn2);
   cl.add_node(cn3);
-
   cl.print();
 
   // TODO - show that your remove function works for List<char>
